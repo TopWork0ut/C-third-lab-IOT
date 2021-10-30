@@ -1,7 +1,6 @@
 #include <stdio.h>
-int number;  // кількість заданих сторні
-int count;   // змінна в яку передаємо кількість триктуників 
-int fUNCtion(int n); //прототип функції
+
+int generate_numbers_for_triangle_sides(int n); //прототип функції
 
 int main(){
 
@@ -14,16 +13,16 @@ int main(){
 }
 
 
-int fUNCtion(int n){ 
-    
+int generate_numbers_for_triangle_sides(int n){ 
+
+    int count;   // змінна в яку передаємо кількість триктуників 
     int sides[n]; 
     
-    for (int i = 1; i <= n  ; i++){        //надаємо масиву чисел
+    for (int i = 0; i <= n - 1 ; i++){        //надаємо масиву чисел
          if ( n >= 3){
-             printf("\nВведіть число %d : ",i);
-             scanf("%d" , &number);
-             sides[i] = number;
-             
+             printf("\nВведіть число %d : ",i + 1);
+             scanf("%d" , &sides[i]);
+                  
          }
          else {
             printf("\nВи ввели замале число сторін - мінімум 3");
